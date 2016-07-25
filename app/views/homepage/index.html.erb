@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ARTICLE-SHOW</title>
+  <meta property="og:title" content="ARTICLE-SHOW">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Webflow">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/nathan-s-radical-site.webflow.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic","PT Sans:400,400italic,700,700italic"]
+      }
+    });
+  </script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico">
+  <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
+</head>
+<body>
+  <div class="content-wrapper">
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-3 w-hidden-small w-hidden-tiny">
+          <div class="white-wrapper"><img class="circle-profile" src="images/photo-1437623889155-075d40e2e59f-bw.jpg">
+            <p class="site-description">Nathan is an awesome designer simple responsive blog template. Easily add new posts using the Editor or change layout and design using the Designer.</p>
+            <div class="grey-rule"></div>
+            <h2 class="small-heading">Featured Posts:</h2>
+            <h5 class="jus">ibero, a pharetra augue. Nulla vitae elit libero, a pharetra augue</h5>
+            <h5 class="jus">malesuada magna mollis euismod. Aenean eu leo quam.</h5>
+            <div class="grey-rule"></div>
+            <div class="social-link-group">
+              <a class="social-icon-link w-inline-block" href="#"><img src="images/social-03.svg" width="25">
+              </a>
+              <a class="social-icon-link w-inline-block" href="#"><img src="images/social-07.svg" width="25">
+              </a>
+              <a class="social-icon-link w-inline-block" href="#"><img src="images/social-18.svg" width="25">
+              </a>
+              <a class="social-icon-link w-inline-block" href="#"><img src="images/social-09.svg" width="25">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="content-column w-col w-col-9">
+          <div class="sidebar-on-mobile">
+            <div class="white-wrapper"><img class="circle-profile" src="images/photo-1437623889155-075d40e2e59f-bw.jpg">
+              <p class="site-description">Nathan is an awesome designer simple responsive blog template. Easily add new posts using the Editor or change layout and design using the Designer.</p>
+              <div class="grey-rule"></div>
+              <h2 class="small-heading">Featured Posts:</h2>
+              <h5 class="jus">ibero, a pharetra augue. Nulla vitae elit libero, a pharetra augue</h5>
+              <h5 class="jus">malesuada magna mollis euismod. Aenean eu leo quam.</h5>
+              <div class="grey-rule"></div>
+              <div class="social-link-group">
+                <a class="social-icon-link w-inline-block" href="#"><img src="images/social-03.svg" width="25">
+                </a>
+                <a class="social-icon-link w-inline-block" href="#"><img src="images/social-07.svg" width="25">
+                </a>
+                <a class="social-icon-link w-inline-block" href="#"><img src="images/social-18.svg" width="25">
+                </a>
+                <a class="social-icon-link w-inline-block" href="#"><img src="images/social-09.svg" width="25">
+                </a>
+              </div>
+            </div>
+          </div>
+         <% @posts.each do |post| %>
+          <div class="post-div">
+            <div class="outer-image"><img class="image-class" src="images/photo-1439894122361-58d230fcdf56-bw.jpg" width="300">
+            </div>
+
+            <div class="text-part">
+              <div class="date"><%= post.created_at.strftime ("%A, %b %d") %></div>
+              <h2 class="header-article"><%= post.title %></h2>
+              <p class="article-sumarry"><%= truncate(post.content, :length => 155) %></p>
+              <div class="w-button" href="#"><span class= "buttony"><%= link_to "Read More", post %></span></div>
+
+            </div>
+          </div>
+              <% end %>
+          <div class="button-wrapper"><a class="button w-button" href="all-posts.html">ALL POSTS</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
