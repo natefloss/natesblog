@@ -266,7 +266,17 @@ input::-moz-focus-inner {
  * the UA stylesheet.
  */
 input {
-  line-height: normal;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #333333;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
 }
 /**
  * It's recommended that you don't attempt to style these elements.
@@ -331,9 +341,8 @@ legend {
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
-textarea {
-  overflow: auto;
-}
+
+
 /**
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
