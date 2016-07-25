@@ -1,5 +1,5 @@
 class HomepageController < ApplicationController
   def index
-    @posts = Post.all.limit(5).order("created_at desc")
+    @posts = Post.all.limit(4).order("created_at desc")
   end
 end
