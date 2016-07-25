@@ -1,0 +1,6 @@
+<%= csrf_meta_tags %>
+          <h1 class="had"><%= @post.title %></h1>
+          <div class="date"><%= @post.created_at.strftime ("%A, %b %d") %></div>
+          <p><%=@post.content %></p>
+          <div class="button-wrapper" href="#"><span class= "button"><%= link_to "Edit", edit_post_path(@post)%></span></div>
+            <div class="button-wrapper" href="#"><span class= "button"><%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "are you sure you want to delete"} %></span></div>
