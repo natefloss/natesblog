@@ -33,6 +33,7 @@
       <div class="navigation-link w-nav-link" href="#">
         <%= link_to "Articles", posts_path %>
       </div>
+
       <a class="navigation-link w-nav-link" href="#">About</a>
       <a class="navigation-link w-nav-link" href="#">Contact</a>
     </nav>
@@ -41,6 +42,11 @@
     </div>
   </div>
 </div>
+<% if notice %>
+<p class="notice"><%= notice %></p>
+<% elsif alert %>
+ <p class="alert"><%= alert %></p>
+ <% end %>
     <%= yield %>
   </body>
 </html>

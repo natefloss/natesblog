@@ -11,7 +11,9 @@ gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 gem 'friendly_id', '~> 5.1'
 
 gem 'will_paginate', '~> 3.1'
-# Use Puma as the app server
+
+gem 'devise', '~> 4.2'
+
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
